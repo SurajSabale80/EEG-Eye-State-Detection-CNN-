@@ -1,5 +1,5 @@
 # Eye State Detection using EEG and CNN
-
+-Live App Link:-https://7nnhgfra9yg9dfybwbg8g2.streamlit.app/
 This project predicts whether a person's eye is **open** or **closed** using EEG signals and a Convolutional Neural Network (CNN).
 
 ## Features
