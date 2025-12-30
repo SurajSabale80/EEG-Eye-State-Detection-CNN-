@@ -2,9 +2,9 @@ import streamlit as st
 import pandas as pd
 from predict import predict_eye_state_batch
 
-st.title("👁️ Eye State Detection using EEG (CNN)")
+st.title("👁️ EEG Eye State Detection (CNN)")
 
-st.write("Upload a CSV file containing EEG data. The app will predict the eye state for the first 10 samples.")
+st.write("Upload a CSV file with EEG data. The app will predict the eye state for the first 10 samples.")
 
 uploaded_file = st.file_uploader("Upload EEG CSV File", type=["csv"])
 
@@ -32,3 +32,4 @@ if uploaded_file is not None:
             data=df_to_predict.to_csv(index=False),
             file_name="predictions.csv"
         )
+
