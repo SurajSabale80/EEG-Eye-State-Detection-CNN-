@@ -2,9 +2,9 @@ import os
 import numpy as np
 from tensorflow.keras.models import load_model
 
-# Load CNN model
+# Load trained CNN model
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(BASE_DIR, "model", "cnn_model.h5")
+MODEL_PATH = os.path.join(BASE_DIR, "model", "cnn_model.h5")  # make sure model folder exists
 model = load_model(MODEL_PATH)
 
 def predict_eye_state_batch(data):
@@ -21,3 +21,4 @@ def predict_eye_state_batch(data):
 
     results = ["Closed Eye" if p[0] > 0.5 else "Open Eye" for p in predictions]
     return results
+
